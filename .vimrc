@@ -17,28 +17,29 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
-" Powerline beginning code
+" Powerline Settings
 set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
-"
-" " Use 256 colours (Use this setting only if your terminal supports 256
-" colours)
+
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 "export TERM=xterm-256color
 
-" NERDTree On
-"autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-nnoremap <C-w> :NERDTreeToggle<CR>  
 
-" Vim ale settings
-let g:ale_linters = {'py': ['pylint', 'pycodestyle', 'autopep8']}
+" NERDTree settings
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+nnoremap <C-w> :NERDTreeToggle<CR>
+
+
+" Vim ALE settings
+let g:ale_linters = {'py': ['pylint', 'pycodestyle', 'autopep8'], 'sh': ['shellcheck']}
+
 
 " Other vim settings
 set number relativenumber
 colorscheme one
 syntax on
-
-
+set tabstop=4
+set background=dark
