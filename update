@@ -1,0 +1,3 @@
+cp ~/.bash_profile ~/Desktop/GitHub/Configuration-Files/.bash_profile
+cp ~/.vimrc ~/Desktop/GitHub/Configuration-Files/.vimrc
+cp ~/.zshrc ~/Desktop/GitHub/Configuration-Files/.zshrc
