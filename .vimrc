@@ -18,16 +18,9 @@ filetype plugin indent on    " required
 
 
 " Powerline Settings
-set rtp+=/Users/shutasuzuki/anaconda/lib/python3.6/site-packages/powerline/
-
-" Always show statusline
+set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
 set laststatus=2
-
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
-"export TERM=xterm-256color
-
-
 
 " NERDTree settings
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
