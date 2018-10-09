@@ -12,6 +12,7 @@ Plugin 'rakr/vim-one'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'w0rp/ale'
 Plugin 'itchyny/lightline.vim'
+Plugin 'valloric/youcompleteme'
 
 " Plugin ending code
 call vundle#end()            " required
@@ -34,7 +35,7 @@ let g:lightline = {'colorscheme': 'one',}
 
 " NERDTree settings
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-nnoremap <C-w> :NERDTreeToggle<CR>
+nnoremap <ww> :NERDTreeToggle<CR>
 
 
 " Vim ALE settings
