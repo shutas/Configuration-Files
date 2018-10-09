@@ -11,6 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'rakr/vim-one'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'w0rp/ale'
+Plugin 'itchyny/lightline.vim'
 
 " Plugin ending code
 call vundle#end()            " required
@@ -18,9 +19,18 @@ filetype plugin indent on    " required
 
 
 " Powerline Settings
-set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
+"set rtp+=/usr/local/lib/python3.7/site-packages/powerline/bindings/vim
+"set laststatus=2
+"set t_Co=256
+
+
+" Lightline Settings
 set laststatus=2
-set t_Co=256
+if !has('gui_running')
+  set t_Co=256
+endif
+set noshowmode
+let g:lightline = {'colorscheme': 'one',}
 
 " NERDTree settings
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
