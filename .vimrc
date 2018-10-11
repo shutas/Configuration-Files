@@ -35,7 +35,7 @@ let g:lightline = {'colorscheme': 'one',}
 
 " NERDTree settings
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-nnoremap <ww> :NERDTreeToggle<CR>
+nnoremap <C-w> :NERDTreeToggle<CR>
 
 
 " Vim ALE settings
