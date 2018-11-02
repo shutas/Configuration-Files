@@ -33,6 +33,7 @@ endif
 set noshowmode
 let g:lightline = {'colorscheme': 'one',}
 
+
 " NERDTree settings
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 nnoremap <C-w> :NERDTreeToggle<CR>
@@ -44,6 +45,7 @@ let g:ale_linters = {'py': ['pylint', 'pycodestyle', 'autopep8'], 'sh': ['shellc
 
 " Other vim settings
 set number relativenumber
+set backspace=indent,eol,start
 colorscheme one
 syntax on
 set tabstop=4
